@@ -1,0 +1,32 @@
+-->assignment 1  answers (database of employee_management_db) 
+
+--> create database employee_db;
+--> use employee_management_db;
+ --> desc employee;
+--> INSERT INTO employee (name, age, salary, experience, profile)
+     VALUES
+    ('Rahul', 25, 30000, 2, 'test'),
+    ('Radha', 28, 35000, 3, 'dev'),
+    ('Amit', 30, 45000, 5, 'test'),
+    ('Priya', 24, 25000, 1, 'support'),
+    ('Sneha', 27, 40000, 4, 'dev'),
+    ('Rohit', 32, 50000, 7, 'test'),
+    ('Neha', 23, 28000, 1, 'support');
+select * from employee;
+now queries:-
+
+1 ans: alter table employee add branch_location varchar(100);
+2 ans: select sum(salary) as total_salary_expense from employee;
+3 ans: select max(salary) as max_salary from employee where profile='test';
+4 ans: select avg(experience) as average_experience from employee;
+5 ans : select name from employee where salary=(select max(salary) from employee);
+6 ans: select name, experience from employee where salary =(select min(salary) from employee);
+7 ans : select count(*) as total_employees from employee;
+8 ans : select name from employee where profile='test' and salary>25000;
+9 ans : update employee set profile='support' where name='radha';
+10 ans : select max(salary) as second_highest_salary from employee  where salary < (select max(salary) from employee);
+11 ans : select min(salary) as second_lowest_salary from employee where salary > (select min(salary) from employee);
+12 ans : select avg(salary) as average_salary from employee where profile='dev';
+13 ans : select name,experience from employee where experience = (select min(experience) from employee);
+14 ans : select name from employee where age = (select min(age) from employee) and salary =(select max(salary) from employee);
+15 ans : truncate  table employee;
