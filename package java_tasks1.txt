@@ -1,0 +1,9 @@
+package java_tasks;
+
+public class task_que_1 
+{
+public static void main(String[] args)
+{
+	System.out.println("hello world by alshifa sayyed");
+}
+}
